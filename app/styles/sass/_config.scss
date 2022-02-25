@@ -1,0 +1,141 @@
+// USER VARIABLES SECTION
+$accent: #38FCF7; // Accent Color
+$fontsize: 14px; // Body Font Size
+$textcolor: #fff; // Text Color
+$lineheight: 1.7; // Document Line Height
+$fontweight: 300;
+$userfont: roboto-1l, sans-serif; // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+
+// Bootstrap compatible gutter variable => $gutter
+// $grid-gutter-width: 30px;
+// $gutter: $grid-gutter-width;
+
+
+// IMPORT SECTION
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss'; // Optional Bootstrap Utilites
+@import 'node_modules/swiper/swiper-bundle';
+
+
+// FONTS LOAD SECTION
+@mixin font($fname, $fstyle, $fweight, $furl) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		src: url($furl) format('woff2');
+	}	
+}
+
+
+// FONTS
+@include font('roboto-1l', normal, 300, '../fonts/roboto-light-webfont.woff2');
+@include font('roboto-1l', normal, 500, '../fonts/roboto-medium-webfont.woff2');
+@include font('roboto-1l', normal, 900, '../fonts/roboto-black-webfont.woff2');
+@include font('avante-l1', normal, 700, '../fonts/avante-tck-webfont.woff2');
+
+
+// RESPONSIVE LAYOUT
+$breakpoint-to-fluid: 992px;
+$breakpoint-to-sm: 720px;
+$base-vw: 1920px;
+$breakpoint-lg: 992px;
+$breakpoint-md: 768px;
+$breakpoint-sm: 576px;
+$container-lg: 1260px;
+$container-md: 720px;
+$container-sm: 540px;
+$p: 15px;
+
+@mixin container {
+    width: 100%;
+    max-width: $container-lg;
+    padding-left: $p;
+    padding-right: $p;
+    margin: 0 auto;
+
+    @media screen and (max-width: $breakpoint-lg) {
+        max-width: $container-md;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        max-width: $container-sm;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        max-width: none;
+    }
+}
+
+@function strip-unit($number) {
+    @if type-of($number)=='number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+    @return $number;
+}
+
+@function calcFluidFontSize($f-min, $f-max, $w-min, $w-max, $units: px) {
+    $f-min: strip-unit($f-min);
+    $f-max: strip-unit($f-max);
+    $w-min: strip-unit($w-min);
+    $w-max: strip-unit($w-max);
+    $k: ($f-max - $f-min)/($w-max - $w-min);
+    $b: $f-min - $k * $w-min;
+    $b: $b + $units;
+    @return calc( #{$k} * 100vw + #{$b});
+}
+
+@mixin fluid($property, $f-min, $f-max, $w-min: $breakpoint-to-fluid, $w-max: $base-vw, $fallback: false) {
+    #{$property}: $f-min;
+    @media (min-width: $w-min) {
+        @if ($fallback) {
+            #{$property}: $fallback;
+        }
+        #{$property}: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, px);
+    }
+    @media (min-width: $w-max) {
+        #{$property}: $f-max;
+    }
+}
+
+
+// GENERAL DOCUMENT STYLES
+* {
+	font-family: $userfont;
+	font-size: $fontsize;
+	line-height: $lineheight;
+	font-weight: $fontweight;
+	color: $textcolor;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	min-width: 200px;
+	position: relative;
+	overflow-x: hidden;
+	background-color: #000;
+}
+	
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}

@@ -1,0 +1,56 @@
+.preloader {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: rgba(196, 196, 196, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        &-img {
+            @include fluid(width, 150px, 200px);
+            @include fluid(height, 150px, 200px);
+            background-image: url("../images/dist/clock.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+        &-text {
+            font-weight: 900;
+            @include fluid(font-size, 28px, 36px);
+            @include fluid(line-height, 34px, 42px);
+            text-transform: uppercase;
+            color: #000000;
+            @include fluid(padding, 50px, 70px);
+            background-color: $accent;
+            border-radius: 8px;
+            @include fluid(margin-top, 15px, 20px);
+            white-space: pre-line;
+            text-align: center;
+        }
+    }
+    &--active {
+        display: flex;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .preloader {
+        &__item {
+            &-text {
+                width: 90%;
+                font-size: 20px;
+                line-height: 24px;
+                padding: 20px 15px;
+            }
+        }
+        
+    }
+}

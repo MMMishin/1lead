@@ -1,0 +1,32 @@
+.logo {
+    @include fluid(width, 160px, 200px);
+    @include fluid(height, 45px, 60px);
+    background-image: url('../images/dist/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: '';
+        height: 85%;
+        @include fluid(width, 14px, 17px);
+        top: 50%;
+        transform: translateY(-50%);
+        right: -70px;
+        background-color: $accent;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .logo {
+        margin-left: 30%;
+        width: 110px;
+        height: 40px;
+        &:before {
+            right: -30px;
+            height: 130%;
+            width: 10px;
+        }
+    }
+}

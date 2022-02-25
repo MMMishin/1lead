@@ -1,0 +1,566 @@
+<!--#set var="title" value="1Lead" -->
+<!--#include virtual="/parts/header.html" -->
+
+<div class="wrapper">
+
+	<div class="preloader" id="preloader">
+		<div class="preloader__item">
+			<div class="preloader__item-img"></div>
+			<div class="preloader__item-text">Ожидание регистрации</div>
+		</div>
+	</div>
+
+	<div class="swiper main-slider">
+		<div class="swiper-wrapper main-slider__wrapper">
+			<div class="swiper-slide main-slider__slide">
+				<section class="header-bg">
+					<header class="header">
+						<div class="logo"></div>
+						<h1 class="header__title">Регистрация</h1>
+						<div class="header__qr"></div>
+						<h2 class="header__subtitle">
+							Наведите телефон<br>
+							на QR-code
+						</h2>
+						<div class="arrowBottom"></div>
+						<div class="currentNum">01</div>
+					</header>
+				</section>
+			</div>
+
+			<div class="swiper-slide main-slider__slide">
+				<section class="reg-bg">
+					<div class="reg">
+						<div class="arrowUp"></div>
+						<div class="logo"></div>
+
+
+						<form action="#" method="POST" class="reg__form">
+							<label for="name" class="reg__form-lab">ФИО *</label>
+							<div class="reg__form-iw">
+								<div class="reg__form-icon"></div>
+								<input type="text" name="name" class="reg__form-inp" autocomplete="off" required>
+							</div>
+							<label for="telegram" class="reg__form-lab">Логин Telegram *</label>
+							<div class="reg__form-iw reg__form-iw--2">
+								<div class="reg__form-icon reg__form-icon--2"></div>
+								<input type="text" name="teltgram" class="reg__form-inp" autocomplete="off" required>
+							</div>
+							<label for="tel" class="reg__form-lab">Номер телефона *</label>
+							<div class="reg__form-iw reg__form-iw--3">
+								<div class="reg__form-icon reg__form-icon--3"></div>
+								<input type="tel" name="tel" class="reg__form-inp" autocomplete="off" required>
+							</div>
+							<label for="list" class="reg__form-lab">Источники *</label>
+							<div class="reg__form-iw reg__form-iw--4">
+								<div class="reg__form-icon reg__form-icon--4"></div>
+								<select name="list" class="reg__form-inp" required>
+									<option value="1">ФБ</option>
+									<option value="2">Тизер</option>
+									<option value="3">Google</option>
+								</select>
+							</div>
+							<button class="reg__form-btn" id="submitForm" type="submit">Отправить</button>
+						</form>
+
+
+						<div class="arrowBottom"></div>
+						<div class="currentNum">02</div>
+					</div>
+				</section>
+			</div>
+
+			<div class="swiper-slide main-slider__slide">
+				<section class="offers-bg">
+					<div class="offers">
+						<div class="arrowUp"></div>
+						<div class="logo offers__logo"></div>
+						<div class="offers__title">Офферы</div>
+						<button class="offers__btn" id="nutra">
+							<div class="offers__btn-text">
+								<div class="offers__btn-title">Нутра</div>
+								<div class="offers__btn-subtitle">Активные офферы и ссылки</div>
+							</div>
+						</button>
+						<button class="offers__btn" id="fiza">
+							<div class="offers__btn-text">
+								<div class="offers__btn-title">Физа</div>
+								<div class="offers__btn-subtitle">Активные офферы и ссылки</div>
+							</div>
+						</button>
+						<div class="currentNum">03</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<section class="table" id="nutraTable">
+		<div class="table__container">
+			<div class="logo"></div>
+			<div class="table__cross" id="cross1"></div>
+			<div class="table__text">
+				<div class="table__title">Нутра</div>
+				<div class="table__subtitle">Активные офферы и ссылки</div>
+			</div>
+			<form class="search">
+				<button type="submit" class="search__btn"></button>
+				<input type="text" class="search__inp">
+			</form>
+			<div class="board">
+				<div class="board__workspace">
+					<div class="board__workspace-header">
+						<div class="board__workspace-title w300">
+							<div class="board__workspace-ti board__workspace-ti--1"></div>
+							<div class="board__workspace-tn">Название оффера</div>
+						</div>
+						<div class="board__workspace-title w200">
+							<div class="board__workspace-ti"></div>
+							<div class="board__workspace-tn">Гео</div>
+						</div>
+						<div class="board__workspace-title w200">
+							<div class="board__workspace-ti"></div>
+							<div class="board__workspace-tn">Источник</div>
+						</div>
+						<div class="board__workspace-title w200">
+							<div class="board__workspace-ti"></div>
+							<div class="board__workspace-tn">Инфа</div>
+						</div>
+						<div class="board__workspace-title w200">
+							<div class="board__workspace-ti"></div>
+							<div class="board__workspace-tn">Таргет</div>
+						</div>
+						<div class="board__workspace-title w300">
+							<div class="board__workspace-ti"></div>
+							<div class="board__workspace-tn">Ссылка на проклу</div>
+						</div>
+						<div class="board__workspace-title w300">
+							<div class="board__workspace-ti"></div>
+							<div class="board__workspace-tn">Ссылка на регу</div>
+						</div>
+					</div>
+					<div class="board__workspace-row">
+						<div class="board__workspace-point w300">ДиабеVIT</div>
+						<div class="board__workspace-point w200">
+							<div class="board__workspace-pw">
+								<div class="board__workspace-cw">
+									<span class="flag"></span>
+									<span>RU</span>
+								</div>
+								<div class="board__workspace-cw">
+									<span class="flag flag--kz"></span>
+									<span>KZ</span>
+								</div>
+							</div>
+						</div>
+						<div class="board__workspace-point w200">тизер, контекст, мт</div>
+						<div class="board__workspace-point w200">Диабет</div>
+						<div class="board__workspace-point w200">35+</div>
+						<div class="board__workspace-point w300"></div>
+						<div class="board__workspace-point w300">
+							<span>РФ http://partner-1535.traflead.su/</span>
+							<span>КЗ http://partner-1535.traflead.su/</span>
+						</div>
+					</div>
+					<div class="board__workspace-row">
+						<div class="board__workspace-point w300">Кето Генетик</div>
+						<div class="board__workspace-point w200">
+							<div class="board__workspace-pw">
+								<div class="board__workspace-cw">
+									<span class="flag"></span>
+									<span>RU</span>
+								</div>
+								<div class="board__workspace-cw">
+									<span class="flag flag--kz"></span>
+									<span>KZ</span>
+								</div>
+							</div>
+						</div>
+						<div class="board__workspace-point w200">тизер, контекст, мт</div>
+						<div class="board__workspace-point w200">Похудение</div>
+						<div class="board__workspace-point w200">35+</div>
+						<div class="board__workspace-point w300"></div>
+						<div class="board__workspace-point w300">
+							<span>РФ http://partner-1535.traflead.su/</span>
+							<span>КЗ http://partner-1535.traflead.su/</span>
+						</div>
+					</div>
+					<div class="board__workspace-row">
+						<div class="board__workspace-point w300">Редумин Форте</div>
+						<div class="board__workspace-point w200">
+							<div class="board__workspace-pw">
+								<div class="board__workspace-cw">
+									<span class="flag"></span>
+									<span>RU</span>
+								</div>
+								<div class="board__workspace-cw">
+									<span class="flag flag--kz"></span>
+									<span>KZ</span>
+								</div>
+							</div>
+						</div>
+						<div class="board__workspace-point w200">тизер, контекст, мт</div>
+						<div class="board__workspace-point w200">Похудение</div>
+						<div class="board__workspace-point w200">35+</div>
+						<div class="board__workspace-point w300"></div>
+						<div class="board__workspace-point w300">
+							<span>РФ http://partner-1535.traflead.su/</span>
+							<span>КЗ http://partner-1535.traflead.su/</span>
+						</div>
+					</div>
+					<div class="board__workspace-row">
+						<div class="board__workspace-point w300">Дюпон титус</div>
+						<div class="board__workspace-point w200">
+							<div class="board__workspace-pw">
+								<div class="board__workspace-cw">
+									<span class="flag"></span>
+									<span>RU</span>
+								</div>
+								<div class="board__workspace-cw">
+									<span class="flag flag--kz"></span>
+									<span>KZ</span>
+								</div>
+							</div>
+						</div>
+						<div class="board__workspace-point w200">тизер, контекст, мт</div>
+						<div class="board__workspace-point w200">Сорняки</div>
+						<div class="board__workspace-point w200">35+</div>
+						<div class="board__workspace-point w300"></div>
+						<div class="board__workspace-point w300">
+							<span>РФ http://partner-1535.traflead.su/</span>
+							<span>КЗ http://partner-1535.traflead.su/</span>
+						</div>
+					</div>
+					<div class="board__workspace-row">
+						<div class="board__workspace-point w300">Голдлайт</div>
+						<div class="board__workspace-point w200">
+							<div class="board__workspace-pw">
+								<div class="board__workspace-cw">
+									<span class="flag"></span>
+									<span>RU</span>
+								</div>
+								<div class="board__workspace-cw">
+									<span class="flag flag--kz"></span>
+									<span>KZ</span>
+								</div>
+							</div>
+						</div>
+						<div class="board__workspace-point w200">тизер, контекст, мт</div>
+						<div class="board__workspace-point w200">Похудение</div>
+						<div class="board__workspace-point w200">35+</div>
+						<div class="board__workspace-point w300"></div>
+						<div class="board__workspace-point w300">
+							<span>РФ http://partner-1535.traflead.su/</span>
+							<span>КЗ http://partner-1535.traflead.su/</span>
+						</div>
+					</div>
+					<div class="board__workspace-row">
+						<div class="board__workspace-point w300">Эротабс</div>
+						<div class="board__workspace-point w200">
+							<div class="board__workspace-pw">
+								<div class="board__workspace-cw">
+									<span class="flag"></span>
+									<span>RU</span>
+								</div>
+								<div class="board__workspace-cw">
+									<span class="flag flag--kz"></span>
+									<span>KZ</span>
+								</div>
+							</div>
+						</div>
+						<div class="board__workspace-point w200">тизер, контекст, мт</div>
+						<div class="board__workspace-point w200">Потенция</div>
+						<div class="board__workspace-point w200">35+</div>
+						<div class="board__workspace-point w300"></div>
+						<div class="board__workspace-point w300">
+							<span>РФ http://partner-1535.traflead.su/</span>
+							<span>КЗ http://partner-1535.traflead.su/</span>
+						</div>
+					</div>
+					<div class="board__workspace-row">
+						<div class="board__workspace-point w300">Виниры новые</div>
+						<div class="board__workspace-point w200">
+							<div class="board__workspace-pw">
+								<div class="board__workspace-cw">
+									<span class="flag"></span>
+									<span>RU</span>
+								</div>
+								<div class="board__workspace-cw">
+									<span class="flag flag--kz"></span>
+									<span>KZ</span>
+								</div>
+							</div>
+						</div>
+						<div class="board__workspace-point w200">тизер, контекст, мт</div>
+						<div class="board__workspace-point w200">Физ</div>
+						<div class="board__workspace-point w200">35+</div>
+						<div class="board__workspace-point w300"></div>
+						<div class="board__workspace-point w300">
+							<span>РФ http://partner-1535.traflead.su/</span>
+							<span>КЗ http://partner-1535.traflead.su/</span>
+						</div>
+					</div>
+					<div class="board__workspace-row">
+						<div class="board__workspace-point w300">Циститофф</div>
+						<div class="board__workspace-point w200">
+							<div class="board__workspace-pw">
+								<div class="board__workspace-cw">
+									<span class="flag flag--kz"></span>
+									<span>KZ</span>
+								</div>
+								<div class="board__workspace-cw">
+									<span class="flag flag--uz"></span>
+									<span>UZ</span>
+								</div>
+							</div>
+						</div>
+						<div class="board__workspace-point w200">тизер, контекст, мт</div>
+						<div class="board__workspace-point w200">Цистит</div>
+						<div class="board__workspace-point w200">35+</div>
+						<div class="board__workspace-point w300"></div>
+						<div class="board__workspace-point w300">
+							<span>РФ http://partner-1535.traflead.su/</span>
+							<span>КЗ http://partner-1535.traflead.su/</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="table" id="fizaTable">
+		<div class="table__container">
+			<div class="logo"></div>
+			<div class="table__cross" id="cross2"></div>
+			<div class="table__text">
+				<div class="table__title">Физа</div>
+				<div class="table__subtitle">Активные офферы и ссылки</div>
+			</div>
+			<form class="search">
+				<button type="submit" class="search__btn"></button>
+				<input type="text" class="search__inp">
+			</form>
+			<div class="board">
+				<div class="board__workspace">
+					<div class="board__workspace-header">
+						<div class="board__workspace-title w300">
+							<div class="board__workspace-ti board__workspace-ti--1"></div>
+							<div class="board__workspace-tn">Название оффера</div>
+						</div>
+						<div class="board__workspace-title w200">
+							<div class="board__workspace-ti"></div>
+							<div class="board__workspace-tn">Гео</div>
+						</div>
+						<div class="board__workspace-title w200">
+							<div class="board__workspace-ti"></div>
+							<div class="board__workspace-tn">Источник</div>
+						</div>
+						<div class="board__workspace-title w200">
+							<div class="board__workspace-ti"></div>
+							<div class="board__workspace-tn">Инфа</div>
+						</div>
+						<div class="board__workspace-title w200">
+							<div class="board__workspace-ti"></div>
+							<div class="board__workspace-tn">Таргет</div>
+						</div>
+						<div class="board__workspace-title w300">
+							<div class="board__workspace-ti"></div>
+							<div class="board__workspace-tn">Ссылка на проклу</div>
+						</div>
+						<div class="board__workspace-title w300">
+							<div class="board__workspace-ti"></div>
+							<div class="board__workspace-tn">Ссылка на регу</div>
+						</div>
+					</div>
+					<div class="board__workspace-row">
+						<div class="board__workspace-point w300">ДиабеVIT</div>
+						<div class="board__workspace-point w200">
+							<div class="board__workspace-pw">
+								<div class="board__workspace-cw">
+									<span class="flag"></span>
+									<span>RU</span>
+								</div>
+								<div class="board__workspace-cw">
+									<span class="flag flag--kz"></span>
+									<span>KZ</span>
+								</div>
+							</div>
+						</div>
+						<div class="board__workspace-point w200">тизер, контекст, мт</div>
+						<div class="board__workspace-point w200">Диабет</div>
+						<div class="board__workspace-point w200">35+</div>
+						<div class="board__workspace-point w300"></div>
+						<div class="board__workspace-point w300">
+							<span>РФ http://partner-1535.traflead.su/</span>
+							<span>КЗ http://partner-1535.traflead.su/</span>
+						</div>
+					</div>
+					<div class="board__workspace-row">
+						<div class="board__workspace-point w300">Кето Генетик</div>
+						<div class="board__workspace-point w200">
+							<div class="board__workspace-pw">
+								<div class="board__workspace-cw">
+									<span class="flag"></span>
+									<span>RU</span>
+								</div>
+								<div class="board__workspace-cw">
+									<span class="flag flag--kz"></span>
+									<span>KZ</span>
+								</div>
+							</div>
+						</div>
+						<div class="board__workspace-point w200">тизер, контекст, мт</div>
+						<div class="board__workspace-point w200">Похудение</div>
+						<div class="board__workspace-point w200">35+</div>
+						<div class="board__workspace-point w300"></div>
+						<div class="board__workspace-point w300">
+							<span>РФ http://partner-1535.traflead.su/</span>
+							<span>КЗ http://partner-1535.traflead.su/</span>
+						</div>
+					</div>
+					<div class="board__workspace-row">
+						<div class="board__workspace-point w300">Редумин Форте</div>
+						<div class="board__workspace-point w200">
+							<div class="board__workspace-pw">
+								<div class="board__workspace-cw">
+									<span class="flag"></span>
+									<span>RU</span>
+								</div>
+								<div class="board__workspace-cw">
+									<span class="flag flag--kz"></span>
+									<span>KZ</span>
+								</div>
+							</div>
+						</div>
+						<div class="board__workspace-point w200">тизер, контекст, мт</div>
+						<div class="board__workspace-point w200">Похудение</div>
+						<div class="board__workspace-point w200">35+</div>
+						<div class="board__workspace-point w300"></div>
+						<div class="board__workspace-point w300">
+							<span>РФ http://partner-1535.traflead.su/</span>
+							<span>КЗ http://partner-1535.traflead.su/</span>
+						</div>
+					</div>
+					<div class="board__workspace-row">
+						<div class="board__workspace-point w300">Дюпон титус</div>
+						<div class="board__workspace-point w200">
+							<div class="board__workspace-pw">
+								<div class="board__workspace-cw">
+									<span class="flag"></span>
+									<span>RU</span>
+								</div>
+								<div class="board__workspace-cw">
+									<span class="flag flag--kz"></span>
+									<span>KZ</span>
+								</div>
+							</div>
+						</div>
+						<div class="board__workspace-point w200">тизер, контекст, мт</div>
+						<div class="board__workspace-point w200">Сорняки</div>
+						<div class="board__workspace-point w200">35+</div>
+						<div class="board__workspace-point w300"></div>
+						<div class="board__workspace-point w300">
+							<span>РФ http://partner-1535.traflead.su/</span>
+							<span>КЗ http://partner-1535.traflead.su/</span>
+						</div>
+					</div>
+					<div class="board__workspace-row">
+						<div class="board__workspace-point w300">Голдлайт</div>
+						<div class="board__workspace-point w200">
+							<div class="board__workspace-pw">
+								<div class="board__workspace-cw">
+									<span class="flag"></span>
+									<span>RU</span>
+								</div>
+								<div class="board__workspace-cw">
+									<span class="flag flag--kz"></span>
+									<span>KZ</span>
+								</div>
+							</div>
+						</div>
+						<div class="board__workspace-point w200">тизер, контекст, мт</div>
+						<div class="board__workspace-point w200">Похудение</div>
+						<div class="board__workspace-point w200">35+</div>
+						<div class="board__workspace-point w300"></div>
+						<div class="board__workspace-point w300">
+							<span>РФ http://partner-1535.traflead.su/</span>
+							<span>КЗ http://partner-1535.traflead.su/</span>
+						</div>
+					</div>
+					<div class="board__workspace-row">
+						<div class="board__workspace-point w300">Эротабс</div>
+						<div class="board__workspace-point w200">
+							<div class="board__workspace-pw">
+								<div class="board__workspace-cw">
+									<span class="flag"></span>
+									<span>RU</span>
+								</div>
+								<div class="board__workspace-cw">
+									<span class="flag flag--kz"></span>
+									<span>KZ</span>
+								</div>
+							</div>
+						</div>
+						<div class="board__workspace-point w200">тизер, контекст, мт</div>
+						<div class="board__workspace-point w200">Потенция</div>
+						<div class="board__workspace-point w200">35+</div>
+						<div class="board__workspace-point w300"></div>
+						<div class="board__workspace-point w300">
+							<span>РФ http://partner-1535.traflead.su/</span>
+							<span>КЗ http://partner-1535.traflead.su/</span>
+						</div>
+					</div>
+					<div class="board__workspace-row">
+						<div class="board__workspace-point w300">Виниры новые</div>
+						<div class="board__workspace-point w200">
+							<div class="board__workspace-pw">
+								<div class="board__workspace-cw">
+									<span class="flag"></span>
+									<span>RU</span>
+								</div>
+								<div class="board__workspace-cw">
+									<span class="flag flag--kz"></span>
+									<span>KZ</span>
+								</div>
+							</div>
+						</div>
+						<div class="board__workspace-point w200">тизер, контекст, мт</div>
+						<div class="board__workspace-point w200">Физ</div>
+						<div class="board__workspace-point w200">35+</div>
+						<div class="board__workspace-point w300"></div>
+						<div class="board__workspace-point w300">
+							<span>РФ http://partner-1535.traflead.su/</span>
+							<span>КЗ http://partner-1535.traflead.su/</span>
+						</div>
+					</div>
+					<div class="board__workspace-row">
+						<div class="board__workspace-point w300">Циститофф</div>
+						<div class="board__workspace-point w200">
+							<div class="board__workspace-pw">
+								<div class="board__workspace-cw">
+									<span class="flag flag--kz"></span>
+									<span>KZ</span>
+								</div>
+								<div class="board__workspace-cw">
+									<span class="flag flag--uz"></span>
+									<span>UZ</span>
+								</div>
+							</div>
+						</div>
+						<div class="board__workspace-point w200">тизер, контекст, мт</div>
+						<div class="board__workspace-point w200">Цистит</div>
+						<div class="board__workspace-point w200">35+</div>
+						<div class="board__workspace-point w300"></div>
+						<div class="board__workspace-point w300">
+							<span>РФ http://partner-1535.traflead.su/</span>
+							<span>КЗ http://partner-1535.traflead.su/</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</div>
+
+<!--#include virtual="/parts/footer.html" -->

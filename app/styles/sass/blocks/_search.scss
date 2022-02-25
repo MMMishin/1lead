@@ -1,0 +1,58 @@
+.search {
+    position: relative;
+    @include fluid(margin-top, 30px, 50px);
+    @include fluid(margin-bottom, 30px, 50px);
+    @include fluid(width, 300px, 400px);
+    @include fluid(height, 40px, 50px);
+    display: flex;
+    border-radius: 8px;
+    box-shadow: none;
+    transition: all .25s ease-in-out;
+    &__inp {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        outline: none;
+        border: none;
+        background-color: #fff;
+        color: #343132;
+        padding-left: 12%;
+        transition: all .25s ease-in-out;
+        @include fluid(font-size, 18px, 24px);
+        font-weight: 500;
+        &:focus {
+            box-shadow: 0 0 10px $accent;
+        }
+    }
+    &__btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        border: none;
+        outline: none;
+        width: 10%;
+        height: 100%;
+        border-radius: 8px 0 0 8px;
+        background-image: url('../images/dist/search.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 60%;
+        background-color: #fff;
+        cursor: pointer;
+        transition: all .25s ease-in-out;
+        &:hover {
+            background-image: url('../images/dist/searchAccent.svg');
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+    .search {
+        width: 100%;
+        height: 30px;
+        &__inp {
+            font-weight: 300;
+        }
+    }
+}
